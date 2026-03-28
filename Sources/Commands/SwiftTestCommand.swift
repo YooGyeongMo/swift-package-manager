@@ -168,6 +168,42 @@ struct TestCommandOptions: ParsableArguments {
     @Option(help: .hidden)
     var experimentalMaximumParallelizationWidth: Int? = nil
 
+    /// Global default timeout in seconds (Swift Testing only).
+    ///
+    /// This argument is consumed by Swift Testing and is passed through verbatim by SwiftPM.
+    @Option(help: .hidden)
+    var experimentalGlobalTimeout: Int? = nil
+
+    /// Global maximum timeout in seconds (Swift Testing only).
+    ///
+    /// This argument is consumed by Swift Testing and is passed through verbatim by SwiftPM.
+    @Option(help: .hidden)
+    var experimentalGlobalMaxTimeout: Int? = nil
+
+    /// Global tags to apply to all tests (Swift Testing only).
+    ///
+    /// This argument is consumed by Swift Testing and is passed through verbatim by SwiftPM.
+    @Option(help: .hidden)
+    var experimentalGlobalTags: String? = nil
+
+    /// Serialize all test execution globally (Swift Testing only).
+    ///
+    /// This argument is consumed by Swift Testing and is passed through verbatim by SwiftPM.
+    @Flag(help: .hidden)
+    var experimentalGlobalSerialized: Bool = false
+
+    /// Global retry count for failed tests (Swift Testing only).
+    ///
+    /// This argument is consumed by Swift Testing and is passed through verbatim by SwiftPM.
+    @Option(help: .hidden)
+    var experimentalGlobalRetryCount: Int? = nil
+
+    /// Global time limit granularity in seconds (Swift Testing only).
+    ///
+    /// This argument is consumed by Swift Testing and is passed through verbatim by SwiftPM.
+    @Option(help: .hidden)
+    var experimentalGlobalGranularity: Int? = nil
+
     /// List the tests and exit.
     @Flag(name: [.customLong("list-tests"), .customShort("l")],
           help: "List test methods in specifier format.")
